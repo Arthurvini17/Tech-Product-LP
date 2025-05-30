@@ -1,8 +1,8 @@
+"use client"
 import React from "react";
 import { HeroProps } from "./HeroProps";
 import Image from "next/image";
-import * as motion from "motion/react-client";
-import { spring } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Hero: React.FC<HeroProps> = ({
   Title,
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="m-5 rotate-3  ">
             <Image
             className="rounded-3xl"
-              src="/images/mobile-view.svg"
+              src="/images/image-mobile.svg"
               alt="image-mobile"
               width={250}
               height={30}
