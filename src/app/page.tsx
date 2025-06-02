@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { KeyCard } from "./components/KeyCard";
+import { CustomerCard } from "./components/CustomerCard";
 
 export default function Home() {
   return (
@@ -12,11 +13,8 @@ export default function Home() {
         Description="Discover how our cutting-edge technology can streamline your workflow and boost productivity."
         ButtonStarted="Get Started today"
       />
-
-
       <div className="flex flex-wrap justify-center gap-4 bg-slate-100 p-10">
       <h1 className=" text-center text-4xl m-4 font-bold">Key Features</h1>
-
         <KeyCard
           title="Intuitive Dashboard"
           description="Easily manage all your data and projects from a single, user-friendly interface designed for efficiency."
@@ -79,6 +77,12 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
             </svg>
           }
         />
+      </div>
+      <div className="flex flex-col flex-wrap p-10 gap-2  ">
+        <h1 className=" text-xl font-bold mb-5 text-center">What Our Customers Say</h1>
+
+        <CustomerCard comments="YourProduct has revolutionized our team's productivity. The intuitive dashboard and seamless integrations have made our work so much easier!" perfil="Jhon Doe"/>
+        <CustomerCard comments="YourProduct has revolutionized our team's productivity. The intuitive dashboard and seamless integrations have made our work so much easier!" perfil="Jhon Doe"/>
       </div>
     </div>
   );
