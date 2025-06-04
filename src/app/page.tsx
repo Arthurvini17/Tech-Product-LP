@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { FrequentlyQuestions } from "./components/FrequentlyQuestions";
 
 export default function Home() {
   return (
@@ -135,7 +136,7 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
             </SwiperSlide>
 
             <SwiperSlide>
-              <PlansCard 
+              <PlansCard
                 plan_type="Enterprise"
                 price={99}
                 storage_quantity={"Unlimited"}
@@ -146,6 +147,24 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
             </SwiperSlide>
           </Swiper>
         </div>
+      </div>
+
+      <div className="flex flex-col gap-5 px-4 text-center">
+
+        <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
+        <FrequentlyQuestions
+          title="How does YourProduct work?"
+          description="YourProduct is a cloud-based platform that helps you manage your projects and data efficiently. Simply sign up, create an account, and start exploring our intuitive dashboard."
+        />
+        <FrequentlyQuestions
+          title="Is my data secure with YourProduct?"
+          description="Absolutely. We prioritize your data security with advanced encryption, regular backups, and strict access controls to ensure your information is always protected."
+        />
+
+        <FrequentlyQuestions
+          title=" Can I upgrade or downgrade my plan?"
+          description="Yes, you can easily upgrade or downgrade your plan at any time directly from your account settings. Changes will be prorated accordingly."
+        />
       </div>
     </div>
   );
