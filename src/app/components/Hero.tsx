@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({
     <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 p-5">
       <div className="flex flex-col items-center">
         <h1 className="text-4xl  font-bold  text-white ">{Title}</h1>
-        <h2 className="text-md  font-medium">{Description}</h2>
+        <h2 className="text-md  text-white font-medium">{Description}</h2>
         <button className=" rounded-3xl w-1/2 self-center text-center  p-2 text-indigo-600  font-black m-5 bg-white ">
           {ButtonStarted}
         </button>
