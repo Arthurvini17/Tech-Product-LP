@@ -9,7 +9,6 @@ export const PlansCard: React.FC<PlansCardProps> = ({
   storage_quantity,
   users_quantity,
   support_type,
-  analytics_on,
   link,
 }) => {
   const isPro = plan_type === "Pro";
