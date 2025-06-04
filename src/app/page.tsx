@@ -1,7 +1,14 @@
+"use client";
 import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { KeyCard } from "./components/KeyCard";
+import { CustomerCard } from "./components/CustomerCard";
+import { PlansCard } from "./components/PlansCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 export default function Home() {
   return (
@@ -12,11 +19,8 @@ export default function Home() {
         Description="Discover how our cutting-edge technology can streamline your workflow and boost productivity."
         ButtonStarted="Get Started today"
       />
-
-
       <div className="flex flex-wrap justify-center gap-4 bg-slate-100 p-10">
-      <h1 className=" text-center text-4xl m-4 font-bold">Key Features</h1>
-
+        <h1 className=" text-center text-4xl m-4 font-bold">Key Features</h1>
         <KeyCard
           title="Intuitive Dashboard"
           description="Easily manage all your data and projects from a single, user-friendly interface designed for efficiency."
@@ -50,9 +54,9 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               ></path>
             </svg>
@@ -71,14 +75,77 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944c-3.668 0-7.01.996-9.162 2.76A11.955 11.955 0 002.944 12c0 3.668.996 7.01 2.76 9.162A11.955 11.955 0 0112 21.056c3.668 0 7.01-.996 9.162-2.76A11.955 11.955 0 0021.056 12c0-3.668-.996-7.01-2.76-9.162z"
               ></path>
             </svg>
           }
         />
+      </div>
+      <div className="flex flex-col flex-wrap p-10 gap-2  ">
+        <h1 className=" text-xl font-bold mb-5 text-center">
+          What Our Customers Say
+        </h1>
+
+        <CustomerCard
+          comments="YourProduct has revolutionized our team's productivity. The intuitive dashboard and seamless integrations have made our work so much easier!"
+          perfil="Jhon Doe"
+        />
+        <CustomerCard
+          comments="YourProduct has revolutionized our team's productivity. The intuitive dashboard and seamless integrations have made our work so much easier!"
+          perfil="Jhon Doe"
+        />
+      </div>
+
+      <div className=" text-center ">
+        <h1 className="text-center  flex justify-center p-5 text-3xl font-bold">
+          Simple & Transparent Pricing
+        </h1>
+
+        <div className="relative flex items-center flex-col justify-center text-center">
+          <Swiper
+            spaceBetween={1}
+            slidesPerView={1}
+            navigation={true}
+            modules={[Navigation]}
+            className="w-full max-w-md"
+          >
+            <SwiperSlide>
+              <PlansCard
+                plan_type="Basic"
+                price={19}
+                storage_quantity={10}
+                users_quantity={1}
+                support_type="Basic Support"
+                link="/"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <PlansCard
+                plan_type="Pro"
+                price={49}
+                storage_quantity={100}
+                users_quantity={5}
+                support_type="Priority Support"
+                link="/"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <PlansCard 
+                plan_type="Enterprise"
+                price={99}
+                storage_quantity={"Unlimited"}
+                users_quantity={1}
+                support_type="Basic Support"
+                link="/"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );
