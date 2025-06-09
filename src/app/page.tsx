@@ -168,7 +168,7 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
       </div>
 
       <div className="">
-        <SupportForm  name="Name" email="Email" message="Message"/>
+        <SupportForm  />
       </div>
     </div>
   );
