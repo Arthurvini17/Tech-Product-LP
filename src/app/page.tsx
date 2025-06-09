@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { FrequentlyQuestions } from "./components/FrequentlyQuestions";
+import { SupportForm } from "./components/SupportForm";
 
 export default function Home() {
   return (
@@ -165,6 +166,10 @@ Experience unparalleled speed and responsiveness, ensuring your tasks are comple
           title=" Can I upgrade or downgrade my plan?"
           description="Yes, you can easily upgrade or downgrade your plan at any time directly from your account settings. Changes will be prorated accordingly."
         />
+      </div>
+
+      <div className="">
+        <SupportForm  name="Name" email="Email" message="Message"/>
       </div>
     </div>
   );
